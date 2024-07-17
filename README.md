@@ -56,7 +56,7 @@ An image to the left that takes a fourth of the width
 
 ```html
 <ilw-columns mode="1x3">
-   <img src="photo.png" alt="" style="ilw-image-cover">
+   <img src="photo.png" alt="" class="ilw-image-cover">
    <ilw-content>
      <h3>Information about graduate programs</h3>
      <p>.....</p>
