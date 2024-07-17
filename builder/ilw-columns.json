@@ -1,9 +1,9 @@
 {
-    "title": "<%= _.startCase(name.slice(4)) %>",
-    "tag": "<%= name %>",
-    "github": "https://github.com/web-illinois/<%= name %>/",
+    "title": "Columns",
+    "tag": "ilw-columns",
+    "github": "https://github.com/web-illinois/ilw-columns/",
     "type": "web component",
-    "element-name": "<%= name %>",
+    "element-name": "ilw-columns",
     "description": "Description for builder.",
     "toolkit-version": "",
     "production-version": "",
