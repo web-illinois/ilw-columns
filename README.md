@@ -14,19 +14,19 @@ This is meant to take the place of the old il-image-feature and il-video-feature
 
 ### Attributes
 * **mode**: the relative size and position of the columns. See below for options.
-* **theme**: *blue*, *orange*, *blue-gradient*, *orange-gradient*, *gray*, *white*. Defaults to white. This is only the background of the columns.
-* **width:** no width attribute will make it fit the container, *full* will break the container and go full width, and *auto* will break the container, but only for the background
+* **theme**: `blue`, `orange`, `blue-gradient`, `orange-gradient`, `gray`, `white`. Defaults to white. This is only the background of the columns.
+* **width:** no width attribute will make it fit the container, `full` will break the container and go full width, and `auto` will break the container, but only for the background
 * **gap**: a length / percentage CSS of padding between the columns. Defaults to none. 
 * **padding**: standard length / percentage CSS of padding around the grid. Defaults to none. 
 * **reverse**: If the columns should reverse, so items on the left will show up on the right. This will have no effect on a smaller container where it stacks. 
 
 ### Mode options
-* 1x1: all columns are equal length
-* 1x2: Last column is twice the length of the rest of the columns
-* 2x1: First column is twice the length of the rest of the columns
-* 1x3: Last column is three times the length of the rest of the columns
-* 3x1: First column is three times the length of the rest of the columns
-* 1x2x1: The middle column is twice the length of the rest of the columns. If there's an odd number, then it will default to the left column 
+* **1x1**: all columns are equal length
+* **1x2**: Last column is twice the length of the rest of the columns
+* **2x1**: First column is twice the length of the rest of the columns
+* **1x3**: Last column is three times the length of the rest of the columns
+* **3x1**: First column is three times the length of the rest of the columns
+* **1x2x1**: The middle column is twice the length of the rest of the columns. If there's an odd number, then it will default to the left column 
 
 ## Code Examples
 
@@ -67,7 +67,9 @@ An image to the left that takes a fourth of the width
 
 ## Accessibility Notes and Use
 
-Use the *reverse* attribute sparingly, as this disrupts the semantic order. Only use this if one of the items is marked decorative and will not be read by a screen reader
+Use the `reverse` attribute sparingly, as this disrupts the semantic order. Only use this if one of the items is marked decorative and will not be read by a screen reader.
+
+These columns will shrink down until it gets to a certain container size. If you have a lot of columns, be aware that these may shrink to an unacceptable size or do weird results (like you have one word per line). 
 
 ## External References
 * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries
