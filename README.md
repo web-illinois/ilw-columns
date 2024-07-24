@@ -6,7 +6,7 @@ Links: **[ilw-columns in Builder](https://builder3.toolkit.illinois.edu/componen
 
 ## Overview
 
-This uses the [CSS flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) to split the container into multiple sections. On smaller containers, the flexbox will shrink to a single column and items will be stacked. 
+This uses the [CSS flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) to split the container into multiple sections. On smaller containers (700px or less), the flexbox will shrink to a single column and items will be stacked. 
 
 This will automatically style the components inside the ilw-columns component to the height of the largest item in the group.
 
@@ -21,12 +21,12 @@ This is meant to take the place of the old il-image-feature and il-video-feature
 * **reverse**: If the columns should reverse, so items on the left will show up on the right. This will have no effect on a smaller container where it stacks. 
 
 ### Mode options
-* **1x1**: all columns are equal length
+* **1x1**: all columns are equal length. This is the default option
 * **1x2**: Last column is twice the length of the rest of the columns
 * **2x1**: First column is twice the length of the rest of the columns
 * **1x3**: Last column is three times the length of the rest of the columns
 * **3x1**: First column is three times the length of the rest of the columns
-* **1x2x1**: The middle column is twice the length of the rest of the columns. If there's an odd number, then it will default to the left column 
+* **1x2x1**: The middle columns are twice the length of the rest of the columns 
 
 ## Code Examples
 
@@ -35,7 +35,7 @@ Three columns with information, all the same size.
 ```html
 <ilw-columns mode="1x1">
    <ilw-content>
-     <h3>Information about undergruadate programs</h3>
+     <h3>Information about undergraduate programs</h3>
      <p>.....</p>
      <p>.....</p>
    </ilw-content>

@@ -13,7 +13,6 @@
 <style>
     div.test {
         background: white;
-        border: thin solid black;
         padding: 10px;
     }
 </style>
@@ -43,36 +42,14 @@
             }
           });
         });
-    
-        function loadNewDiv() {
-            const newDiv = document.createElement('div');
-            newDiv.className = 'test';
-            newDiv.innerHTML = '<h3>New Item</h3><p>Consectetur adipiscing elit. Donec posuere dui mauris, eu scelerisque mauris mattis in. Nunc sed leo arcu. Nulla non eleifend sapien.</p>';
-            document.getElementById('test-item').appendChild(newDiv);
-            document.getElementById('test-item').refresh();
-        }
-        
-        function removeDiv() {
-            document.getElementById('test-item').children[0].remove();
-            document.getElementById('test-item').refresh();
-        }
-    
-        function editDiv() {
-            let div = document.getElementById('test-item').children[0];
-            div.innerHTML = '<h3>Edited Item</h3><p>Maecenas a mollis quam, eu venenatis lorem.</p>';
-        }
     </script>
       
       <body style="margin: 0 auto; padding: 0; max-width: 1200px;">
          <ilw-columns id="test-item">
-            <div class="test"><h3>Lorem ipsum dolor sit amet</h3><p>Consectetur adipiscing elit. <div>Donec posuere dui mauris, eu scelerisque mauris mattis in. Nunc sed leo arcu. Nulla non eleifend sapien.</div> </p></div>
+            <div class="ilw-image-cover"><img src="https://picsum.photos/300/300" alt=""></div>
             <div class="test"><h3>Lorem ipsum dolor sit amet</h3><p>Nunc sed leo arcu. Nulla non eleifend sapien. </p></div>
          </ilw-columns>
-    
-         <button class="ilw-button" onclick="removeDiv()">Remove Item</button>
-         <button class="ilw-button" onclick="loadNewDiv()">Add New Item</button>
-         <button class="ilw-button" onclick="editDiv()">Edit Item</button>
-    </body>
+      </body>
 </body>
 
 </html>

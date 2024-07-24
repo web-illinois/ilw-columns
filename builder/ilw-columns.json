@@ -4,7 +4,7 @@
     "github": "https://github.com/web-illinois/ilw-columns/",
     "type": "web component",
     "element-name": "ilw-columns",
-    "description": "Description for builder.",
+    "description": "Creates a single row of items that you can use to display information, with information of different widths.",
     "toolkit-version": "",
     "production-version": "",
     "development-version": "1.0.0-alpha"

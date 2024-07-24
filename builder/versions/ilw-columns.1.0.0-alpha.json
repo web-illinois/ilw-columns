@@ -4,7 +4,7 @@
     "github": "https://github.com/web-illinois/ilw-columns/",
     "type": "web component",
     "element-name": "ilw-columns",
-    "description": "Description for builder.",
+    "description": "Creates a single row of items that you can use to display information, with information of different widths.",
     "version": "1.0.0-alpha",
     "date": "07/17/2024",
     "css": "https://dev.toolkit.illinois.edu/ilw-columns/1.0.0-alpha/ilw-columns.css",
@@ -16,24 +16,79 @@
         {
             "name": "default",
             "description": "Default information",
-            "text": "<p>Lorem ipsum</p>"
+            "text": "<div class='test'><h3>Lorem ipsum dolor sit amet</h3><p>Consectetur adipiscing elit. <div>Donec posuere dui mauris, eu scelerisque mauris mattis in. Nunc sed leo arcu. Nulla non eleifend sapien.</div> </p></div><div class='test'><h3>Lorem ipsum dolor sit amet</h3><p>Nunc sed leo arcu. Nulla non eleifend sapien. </p></div>"
+        },
+        {
+            "name": "image",
+            "description": "Image Feature",
+            "text": "<div class='ilw-image-cover'><img src='https://picsum.photos/300/300' alt=''></div><div class='test'><h3>Lorem ipsum dolor sit amet</h3><p>Nunc sed leo arcu. Nulla non eleifend sapien. </p></div>"
         }
     ],
     "attributes-fixed": [],
-    "attributes-text": [],
+    "attributes-text": [
+        {
+			"name": "padding",
+			"description": "Padding of the text inside the component",
+			"depreciated": false,
+			"value": ""
+		},
+        {
+			"name": "gap",
+			"description": "Gap in pixels or percentage between the columns, defaults to none",
+			"depreciated": false,
+			"value": ""
+		}
+    ],
     "attributes": [
         {
-            "name": "theme",
-            "description": "Color theme used",
-            "depreciated": false,
-            "values": [
-                "",
-                "blue",
-                "orange",
-                "white"
-            ]
-        }
+			"name": "mode",
+			"description": "Mode of the columns (width)",
+			"depreciated": false,
+			"values": [
+				"",
+				"1x1",
+				"1x2",
+				"1x3",
+				"2x1",
+				"3x1",
+				"1x2x1"
+			]
+		},
+        {
+			"name": "theme",
+			"description": "Color theme used",
+			"depreciated": false,
+			"values": [
+				"",
+				"blue",
+				"orange",
+				"blue-gradient",
+				"orange-gradient",
+				"gray",
+				"white"
+			]
+		},
+		{
+			"name": "width",
+			"description": "Width of component",
+			"depreciated": false,
+			"values": [
+				"",
+				"full",
+				"auto"
+			]
+		},
+        {
+			"name": "reverse",
+			"description": "If the order of the columns are reversed in a row, defaults to false",
+			"depreciated": false,
+			"values": [
+				"",
+				"true"
+			]
+		}
     ],
+
     "classes-fixed": [],
     "classes": [],
     "css-variables": [
