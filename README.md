@@ -71,6 +71,10 @@ Use the `reverse` attribute sparingly, as this disrupts the semantic order. Only
 
 These columns will shrink down until it gets to a certain container size. If you have a lot of columns, be aware that these may shrink to an unacceptable size or do weird results (like you have one word per line). 
 
+This is using the manual slot assignment process using the MutationObserver interface to watch for changes in the DOM. 
+
 ## External References
 * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries
 * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
+* https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow#slotassignment
+* https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/observe 

@@ -1,6 +1,7 @@
 import { LitElement, html } from 'lit';
 import { map } from 'lit/directives/map.js';
 import styles from './ilw-columns.styles';
+import { ManualSlotController } from './ManualSlotController.js';
 import './ilw-columns.css';
 
 class Columns extends LitElement {
@@ -19,6 +20,8 @@ class Columns extends LitElement {
     static get styles() {
         return styles;
     }
+
+    _observer = new ManualSlotController(this);
 
     constructor() {
         super();
@@ -73,44 +76,11 @@ class Columns extends LitElement {
       return this.width == 'auto' ? 'fixed' : '';
     }
 
-    refresh() {
-        let items = this._items;
-        let slots = Array.from(this.shadowRoot.querySelectorAll('slot'));
-        if (items.length > slots.length) {
-            let columnBase = this.shadowRoot.querySelector('div.columns');
-            for (let i = slots.length; i < items.length; i++) {
-                let div = document.createElement('div');
-                div.appendChild(document.createElement('slot'));
-                columnBase.appendChild(div);
-            }
-        } else if (items.length < slots.length) {
-            let columnBase = this.shadowRoot.querySelector('div.columns');
-            for (let i = items.length; i < slots.length; i++) {
-                columnBase.children[0].remove();
-            }
-        }
-        this._refreshInternal();
-    }
-
-    _refreshInternal() {
-        let items = this._items;
-        let slots = Array.from(this.shadowRoot.querySelectorAll('slot'));
-        for (let slot of slots) {
-          if (items.length > 0) {
-            slot.assign(items.shift());
-          }
-        }
-    }
-
-    updated(changed) {
-        this._refreshInternal();
-    }
-
     render() {
       return html`
       <div class="columns-outer ${this.theme} ${this.outerWidth}">
           <div class="columns ${this.innerWidth} ${this.columnsClass} ${this.reverseClass}" style="${this.paddingStyle} ${this.gapStyle}">
-            ${map(this._items, () => html`<div><slot></slot></div>`)}
+            ${map(Array.from(this.children), () => html`<div><slot></slot></div>`)}
           </div>
       </div>
       `;
