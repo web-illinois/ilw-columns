@@ -1,19 +1,27 @@
 {
     "name": "@illinois-toolkit/ilw-columns",
-    "description": "One paragraph description of the component.",
+    "description": "Illinois Toolkit: This uses the CSS flexbox to split the container into multiple sections.",
     "repository": "github:web-illinois/ilw-columns",
     "private": false,
-    "version": "0.0.1",
+    "version": "1.0.0-alpha",
     "type": "module",
+    "files": [
+      "src/**",
+      "dist/**",
+      "builder/**"
+    ],
     "exports": {
         ".": {
-            "import": "./src/ilw-columns.js"
+            "import": "./src/ilw-columns.js",
+            "require": "./src/ilw-columns.cjs",
+            "default": "./src/ilw-columns.js"
         }
     },
     "scripts": {
         "dev": "vite",
         "build": "vite build --config vite.build.config.js --emptyOutDir",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "prepack": "npm run build"
     },
     "dependencies": {
         "lit": "3.1.3"
