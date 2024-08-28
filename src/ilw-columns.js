@@ -29,7 +29,7 @@ class Columns extends LitElement {
         this.mode = '';
         this.width = '';
         this.gap = '';
-        this.padding = '';
+        this.padding = '0 0 40px 0';
         this.reverse = false;
     }
 

@@ -5,10 +5,10 @@
     "type": "web component",
     "element-name": "ilw-columns",
     "description": "Creates a single row of items that you can use to display information, with information of different widths.",
-    "version": "1.0.0-alpha",
+    "version": "1.0.0-alpha1",
     "date": "07/17/2024",
-    "css": "https://dev.toolkit.illinois.edu/ilw-columns/1.0.0-alpha/ilw-columns.css",
-    "js": "https://dev.toolkit.illinois.edu/ilw-columns/1.0.0-alpha/ilw-columns.js",
+    "css": "https://dev.toolkit.illinois.edu/ilw-columns/1.0.0-alpha1/ilw-columns.css",
+    "js": "https://dev.toolkit.illinois.edu/ilw-columns/1.0.0-alpha1/ilw-columns.js",
     "production": false,
     "notes": "",
     "parent-style": "",
@@ -28,7 +28,7 @@
     "attributes-text": [
         {
 			"name": "padding",
-			"description": "Padding of the text inside the component",
+			"description": "Padding of the text inside the component, defaults to 0 0 40px 0",
 			"depreciated": false,
 			"value": ""
 		},

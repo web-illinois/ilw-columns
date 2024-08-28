@@ -16,7 +16,7 @@ This is meant to take the place of the old il-image-feature and il-video-feature
 * **mode**: the relative size and position of the columns. See below for options.
 * **theme**: `blue`, `orange`, `blue-gradient`, `orange-gradient`, `gray`, `white`. Defaults to white. This is only the background of the columns.
 * **width:** no width attribute will make it fit the container, `full` will break the container and go full width, and `auto` will break the container, but only for the background
-* **gap**: a length / percentage CSS of padding between the columns. Defaults to none. 
+* **gap**: a length / percentage CSS of padding between the columns. Defaults to `0 0 40px 0` to handle padding. 
 * **padding**: standard length / percentage CSS of padding around the grid. Defaults to none. 
 * **reverse**: If the columns should reverse, so items on the left will show up on the right. This will have no effect on a smaller container where it stacks. 
 
