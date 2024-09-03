@@ -8,7 +8,7 @@ export default css`
   }
 
   div.columns.fixed {
-    margin: var(--ilw-columns--main-margin, 0);
+    margin: 0 var(--ilw-margin--side, 0);
   }
 
   div.columns > div {

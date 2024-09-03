@@ -2,7 +2,6 @@ import { LitElement, html } from 'lit';
 import { map } from 'lit/directives/map.js';
 import styles from './ilw-columns.styles';
 import { ManualSlotController } from './ManualSlotController.js';
-import './ilw-columns.css';
 
 class Columns extends LitElement {
     static shadowRootOptions = {...LitElement.shadowRootOptions, slotAssignment: "manual"};
@@ -73,7 +72,7 @@ class Columns extends LitElement {
     }
     
     get innerWidth() {
-      return this.width == 'auto' ? 'fixed' : '';
+      return this.width == 'auto' || this.width == 'page' ? 'fixed' : '';
     }
 
     render() {
