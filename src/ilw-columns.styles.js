@@ -1,8 +1,6 @@
 import { css } from 'lit';
 
 export default css`
-
-
   div.columns {
     display: flex;
   }

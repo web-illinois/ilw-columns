@@ -2,6 +2,7 @@ import { LitElement, html } from 'lit';
 import { map } from 'lit/directives/map.js';
 import styles from './ilw-columns.styles';
 import { ManualSlotController } from './ManualSlotController.js';
+import './ilw-columns.css';
 
 class Columns extends LitElement {
     static shadowRootOptions = {...LitElement.shadowRootOptions, slotAssignment: "manual"};
