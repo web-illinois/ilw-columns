@@ -1,0 +1,7 @@
+ilw-columns {
+    display: block;
+}
+
+ilw-columns[width="fixed"] {
+    container-type: inline-size;
+}

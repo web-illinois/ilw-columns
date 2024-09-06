@@ -17,51 +17,49 @@
         padding: 10px;
     }
 </style>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      const params = new URLSearchParams(window.location.search);
+      document.querySelectorAll("ilw-columns").forEach(component => {
+        if (params.has('theme')) {
+          component.setAttribute('theme', params.get('theme'));
+        }
+        if (params.has('mode')) {
+          component.setAttribute('mode', params.get('mode'));
+        }
+        if (params.has('width')) {
+          component.setAttribute('width', params.get('width'));
+        }
+        if (params.has('padding')) {
+          component.setAttribute('padding', params.get('padding'));
+        }
+        if (params.has('gap')) {
+          component.setAttribute('gap', params.get('gap'));
+        }
+        if (params.has('reverse')) {
+          component.setAttribute('reverse', params.get('reverse'));
+        }
+      });
+    });
 
+    function loadNewDiv() {
+        const newDiv = document.createElement('div');
+        newDiv.className = 'test';
+        newDiv.innerHTML = '<h3>New Item</h3><p>Consectetur adipiscing elit. Donec posuere dui mauris, eu scelerisque mauris mattis in. Nunc sed leo arcu. Nulla non eleifend sapien.</p>';
+        document.getElementById('test-item').appendChild(newDiv);
+        document.getElementById('test-item').refresh();
+    }
+    
+    function removeDiv() {
+        document.getElementById('test-item').children[0].remove();
+        document.getElementById('test-item').refresh();
+    }
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function(event) {
-          const params = new URLSearchParams(window.location.search);
-          document.querySelectorAll("ilw-columns").forEach(component => {
-            if (params.has('theme')) {
-              component.setAttribute('theme', params.get('theme'));
-            }
-            if (params.has('mode')) {
-              component.setAttribute('mode', params.get('mode'));
-            }
-            if (params.has('width')) {
-              component.setAttribute('width', params.get('width'));
-            }
-            if (params.has('padding')) {
-              component.setAttribute('padding', params.get('padding'));
-            }
-            if (params.has('gap')) {
-              component.setAttribute('gap', params.get('gap'));
-            }
-            if (params.has('reverse')) {
-              component.setAttribute('reverse', params.get('reverse'));
-            }
-          });
-        });
-    
-        function loadNewDiv() {
-            const newDiv = document.createElement('div');
-            newDiv.className = 'test';
-            newDiv.innerHTML = '<h3>New Item</h3><p>Consectetur adipiscing elit. Donec posuere dui mauris, eu scelerisque mauris mattis in. Nunc sed leo arcu. Nulla non eleifend sapien.</p>';
-            document.getElementById('test-item').appendChild(newDiv);
-            document.getElementById('test-item').refresh();
-        }
-        
-        function removeDiv() {
-            document.getElementById('test-item').children[0].remove();
-            document.getElementById('test-item').refresh();
-        }
-    
-        function editDiv() {
-            let div = document.getElementById('test-item').children[0];
-            div.innerHTML = '<h3>Edited Item</h3><p>Maecenas a mollis quam, eu venenatis lorem.</p>';
-        }
-    </script>
+    function editDiv() {
+        let div = document.getElementById('test-item').children[0];
+        div.innerHTML = '<h3>Edited Item</h3><p>Maecenas a mollis quam, eu venenatis lorem.</p>';
+    }
+</script>
       
       <body style="margin: 0 auto; padding: 0; max-width: 1200px;">
          <ilw-columns id="test-item">
