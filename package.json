@@ -3,12 +3,12 @@
     "description": "Illinois Toolkit: This uses the CSS flexbox to split the container into multiple sections.",
     "repository": "github:web-illinois/ilw-columns",
     "private": false,
-    "version": "1.0.0-alpha2",
+    "version": "1.0.0-beta",
     "type": "module",
     "files": [
-      "src/**",
-      "dist/**",
-      "builder/**"
+        "src/**",
+        "dist/**",
+        "builder/**"
     ],
     "exports": {
         ".": {
