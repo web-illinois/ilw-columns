@@ -6,7 +6,7 @@
     "element-name": "ilw-columns",
     "description": "Creates a single row of items that you can use to display information, with information of different widths.",
     "builder-version": "1.0-beta",
-	"version": "1.0.1-beta",
+    "version": "1.0.1-beta",
     "date": "10/08/2024",
     "css": "https://dev.toolkit.illinois.edu/ilw-columns/1.0.1-beta/ilw-columns.css",
     "js": "https://dev.toolkit.illinois.edu/ilw-columns/1.0.1-beta/ilw-columns.js",
@@ -90,7 +90,6 @@
 			]
 		}
     ],
-
     "classes-fixed": [],
     "classes": [],
     "css-variables": [
