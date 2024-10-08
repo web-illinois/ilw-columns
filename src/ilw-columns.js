@@ -65,7 +65,7 @@ class Columns extends LitElement {
     }
 
     get gapStyle() {
-        return this.gap == '' ? '' : 'column-gap: ' + this.gap + ';';
+        return this.gap == '' ? '0' : this.gap;
     }
 
     get outerWidth() {
@@ -78,6 +78,7 @@ class Columns extends LitElement {
 
     render() {
       return html`
+      <style>:host { --ilw-columns-gap: ${this.gapStyle}; } </style>
       <div class="columns-outer ${this.theme} ${this.outerWidth}">
           <div class="columns ${this.innerWidth} ${this.columnsClass} ${this.reverseClass}" style="${this.paddingStyle} ${this.gapStyle}">
             ${map(Array.from(this.children), () => html`<div><slot></slot></div>`)}
