@@ -57,6 +57,8 @@ export default css`
         position:relative;
         right:50%;
         width:100vw;
+        container-type: inline-size;
+        contain: layout;
     }
 
   .columns-outer.blue {
