@@ -14,6 +14,10 @@ export default css`
     flex: 1 0 0;
   }
 
+  div.columns.sidebar-left > div:first-child, div.columns.sidebar-right > div:last-child {
+    flex: 0 0 var(--ilw-columns--width--sidebar, 280px);
+  }
+
   div.columns.first2 > div:first-child, div.columns.last2 > div:last-child {
     flex: 2 0 0;
   }

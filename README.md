@@ -27,8 +27,8 @@ This is meant to take the place of the old il-image-feature and il-video-feature
 * **1x3**: Last column is three times the length of the rest of the columns
 * **3x1**: First column is three times the length of the rest of the columns
 * **1x2x1**: The middle columns are twice the length of the rest of the columns 
-* **sidebar-left**: There is a fixed width (280px) sidebar on the left-hand side. This is controlled by `--ilw-columns--width--sidebar`
-* **sidebar-right**: There is a fixed width (280px) sidebar on the right-hand side. This is controlled by `--ilw-columns--width--sidebar`
+* **sidebar-left**: There is a fixed width (280px) sidebar on the left-hand side. This is controlled by `--ilw-columns--width--sidebar`. This will change the gap to 30px unless manually set.
+* **sidebar-right**: There is a fixed width (280px) sidebar on the right-hand side. This is controlled by `--ilw-columns--width--sidebar`. This will change the gap to 30px unless manually set.
 
 ## Code Examples
 

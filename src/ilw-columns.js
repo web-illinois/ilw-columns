@@ -57,6 +57,12 @@ class Columns extends LitElement {
         if (this.mode == '1x2x1') {
             return 'middle2';
         }
+        if (this.mode == 'sidebar-left') {
+            return 'sidebar-left';
+        }
+        if (this.mode == 'sidebar-right') {
+            return 'sidebar-right';
+        }
         return '';
     }
 
@@ -65,7 +71,7 @@ class Columns extends LitElement {
     }
 
     get gapStyle() {
-        return this.gap == '' ? '0' : this.gap;
+        return this.gap == '' ? this.mode == 'sidebar-left' || this.mode == 'sidebar-right' ? '30px' : '0' : this.gap;
     }
 
     get outerWidth() {
