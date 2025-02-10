@@ -1,0 +1,104 @@
+{
+    "title": "Columns",
+    "tag": "ilw-columns",
+    "github": "https://github.com/web-illinois/ilw-columns/",
+    "type": "web component",
+    "element-name": "ilw-columns",
+    "description": "Creates a single row of items that you can use to display information, with information of different widths.",
+    "builder-version": "1.1",
+    "version": "1.1.0",
+    "date": "02/10/2025",
+    "css": "https://cdn.toolkit.illinois.edu/ilw-columns/1.1.0/ilw-columns.css",
+    "js": "https://cdn.toolkit.illinois.edu/ilw-columns/1.1.0/ilw-columns.js",
+    "production": true,
+    "notes": "",
+    "parent-style": "",
+    "samples": [
+        {
+            "name": "default",
+            "description": "Default information",
+            "text": "<div class='test'><h3>Lorem ipsum dolor sit amet</h3><p>Consectetur adipiscing elit. <div>Donec posuere dui mauris, eu scelerisque mauris mattis in. Nunc sed leo arcu. Nulla non eleifend sapien.</div> </p></div><div class='test'><h3>Lorem ipsum dolor sit amet</h3><p>Nunc sed leo arcu. Nulla non eleifend sapien. </p></div>"
+        },
+        {
+            "name": "image",
+            "description": "Image Feature",
+            "text": "<div class='ilw-image-cover'><img src='https://picsum.photos/300/300' alt=''></div><div class='test'><h3>Lorem ipsum dolor sit amet</h3><p>Nunc sed leo arcu. Nulla non eleifend sapien. </p></div>"
+        }
+    ],
+    "attributes-fixed": [],
+    "attributes-text": [
+        {
+			"name": "padding",
+			"description": "Padding of the text inside the component, defaults to 0 0 40px 0",
+			"depreciated": false,
+			"value": ""
+		},
+        {
+			"name": "gap",
+			"description": "Gap in pixels or percentage between the columns, defaults to none",
+			"depreciated": false,
+			"value": ""
+		}
+    ],
+    "attributes": [
+        {
+			"name": "mode",
+			"description": "Mode of the columns (width)",
+			"depreciated": false,
+			"values": [
+				"",
+				"1x1",
+				"1x2",
+				"1x3",
+				"2x1",
+				"3x1",
+				"1x2x1",
+				"sidebar-left",
+				"sidebar-right"
+			]
+		},
+        {
+			"name": "theme",
+			"description": "Color theme used",
+			"depreciated": false,
+			"values": [
+				"",
+				"blue",
+				"orange",
+				"blue-gradient",
+				"orange-gradient",
+				"gray",
+				"white"
+			]
+		},
+		{
+			"name": "width",
+			"description": "Width of component",
+			"depreciated": false,
+			"values": [
+				"",
+				"full",
+				"auto",
+				"page"
+			]
+		},
+        {
+			"name": "reverse",
+			"description": "If the order of the columns are reversed in a row, defaults to false",
+			"depreciated": false,
+			"values": [
+				"",
+				"true"
+			]
+		}
+    ],
+    "classes-fixed": [],
+    "classes": [],
+    "css-variables": [
+		{
+			"name": "--ilw-columns--width--sidebar",
+			"description": "Width of the sidebar",
+			"depreciated": false
+		}
+	]
+}
