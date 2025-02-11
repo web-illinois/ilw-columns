@@ -86,7 +86,7 @@ class Columns extends LitElement {
       return html`
       <style>:host { --ilw-columns-gap: ${this.gapStyle}; } </style>
       <div class="columns-outer ${this.theme} ${this.outerWidth}">
-          <div class="columns ${this.innerWidth} ${this.columnsClass} ${this.reverseClass}" style="${this.paddingStyle} ${this.gapStyle}">
+          <div class="columns ${this.innerWidth} ${this.columnsClass} ${this.reverseClass}" style="${this.paddingStyle}">
             ${map(Array.from(this.children), () => html`<div><slot></slot></div>`)}
           </div>
       </div>
