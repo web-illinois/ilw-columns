@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Columns Component</title>
     <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
-    <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-global/3.0.0-alpha/ilw-global.css">
+    <link rel="stylesheet" href="https://cdn.toolkit.illinois.edu/ilw-global/3.0.0/ilw-global.css">
     <script type="module" src="/src/ilw-columns.js"></script>
 </head>
 
@@ -47,12 +47,10 @@
         newDiv.className = 'test';
         newDiv.innerHTML = '<h3>New Item</h3><p>Consectetur adipiscing elit. Donec posuere dui mauris, eu scelerisque mauris mattis in. Nunc sed leo arcu. Nulla non eleifend sapien.</p>';
         document.getElementById('test-item').appendChild(newDiv);
-        document.getElementById('test-item').refresh();
     }
     
     function removeDiv() {
         document.getElementById('test-item').children[0].remove();
-        document.getElementById('test-item').refresh();
     }
 
     function editDiv() {
@@ -61,16 +59,15 @@
     }
 </script>
       
-      <body style="margin: 0 auto; padding: 0; max-width: 1200px;">
-         <ilw-columns id="test-item">
-            <div class="test"><h3>Lorem ipsum dolor sit amet</h3><p>Consectetur adipiscing elit. <div>Donec posuere dui mauris, eu scelerisque mauris mattis in. Nunc sed leo arcu. Nulla non eleifend sapien.</div> </p></div>
-            <div class="test"><h3>Lorem ipsum dolor sit amet</h3><p>Nunc sed leo arcu. Nulla non eleifend sapien. </p></div>
-         </ilw-columns>
-    
-         <button class="ilw-button" onclick="removeDiv()">Remove Item</button>
-         <button class="ilw-button" onclick="loadNewDiv()">Add New Item</button>
-         <button class="ilw-button" onclick="editDiv()">Edit Item</button>
-    </body>
+<body style="margin: 0 auto; padding: 0; max-width: 1200px;">
+    <ilw-columns id="test-item">
+      <div class="test"><h3>Lorem ipsum dolor sit amet</h3><p>Consectetur adipiscing elit. <div>Donec posuere dui mauris, eu scelerisque mauris mattis in. Nunc sed leo arcu. Nulla non eleifend sapien.</div> </p></div>
+      <div class="test"><h3>Lorem ipsum dolor sit amet</h3><p>Nunc sed leo arcu. Nulla non eleifend sapien. </p></div>
+    </ilw-columns>
+
+    <button class="ilw-button" onclick="removeDiv()">Remove Item</button>
+    <button class="ilw-button" onclick="loadNewDiv()">Add New Item</button>
+    <button class="ilw-button" onclick="editDiv()">Edit Item</button>
 </body>
 
 </html>

@@ -1,3 +1,7 @@
+:root {
+    --ilw-columns--width--sidebar: 280px;
+}
+
 ilw-columns {
     display: block;
 }
