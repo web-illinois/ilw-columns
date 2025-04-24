@@ -3,7 +3,7 @@ import { css } from 'lit';
 export default css`
   div.columns {
     display: flex;
-    column-gap: var(--ilw-columns-gap, 0);
+    column-gap: var(--ilw-columns--gap, 0);
   }
 
   div.columns.fixed {
@@ -41,14 +41,14 @@ export default css`
   @media (max-width: 700px) {
     div.columns {
       flex-direction: column;
-      row-gap: var(--ilw-columns-gap, 0);
+      row-gap: var(--ilw-columns--gap, 0);
     }
   }
 
   @container (max-width: 700px) {
     div.columns {
       flex-direction: column;
-      row-gap: var(--ilw-columns-gap, 0);
+      row-gap: var(--ilw-columns--gap, 0);
     }
   }
 

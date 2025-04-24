@@ -67,6 +67,22 @@ An image to the left that takes a fourth of the width
 </ilw-columns>
 ```
 
+## CSS-only columns
+
+You can also create `<div>` with columns without using the ilw-columns component by using the `ilw-columns` class. 
+
+This is in the ilw-columns layer, so you can use the [layer syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer) to control how this cascades with other CSS layers. 
+
+The column gap is 20px, but can be changed via the `--ilw-columns--gap` CSS variable
+
+### CSS-only helper classes
+* **ilw-fixed**: Puts margins around the columns
+* **ilw-1x2**: Last column is twice the length of the rest of the columns
+* **ilw-2x1**: First column is twice the length of the rest of the columns
+* **ilw-1x3**: Last column is three times the length of the rest of the columns
+* **ilw-3x1**: First column is three times the length of the rest of the columns
+* **ilw-1x2x1**: The middle columns are twice the length of the rest of the columns 
+
 ## Accessibility Notes and Use
 
 Use the `reverse` attribute sparingly, as this disrupts the semantic order. Only use this if one of the items is marked decorative and will not be read by a screen reader.

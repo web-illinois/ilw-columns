@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Columns Component</title>
+    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
+    <link rel="stylesheet" href="https://cdn.toolkit.illinois.edu/ilw-global/3.0.0/ilw-global.css">
+    <script type="module" src="/src/ilw-columns.js"></script>
+</head>
+
+<style>
+    div.test {
+        background: white;
+        border: thin solid black;
+        padding: 10px;
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      const params = new URLSearchParams(window.location.search);
+      document.querySelectorAll("ilw-columns").forEach(component => {
+        if (params.has('theme')) {
+          component.setAttribute('theme', params.get('theme'));
+        }
+        if (params.has('mode')) {
+          component.setAttribute('mode', params.get('mode'));
+        }
+        if (params.has('width')) {
+          component.setAttribute('width', params.get('width'));
+        }
+        if (params.has('padding')) {
+          component.setAttribute('padding', params.get('padding'));
+        }
+        if (params.has('gap')) {
+          component.setAttribute('gap', params.get('gap'));
+        }
+        if (params.has('reverse')) {
+          component.setAttribute('reverse', params.get('reverse'));
+        }
+      });
+    });
+
+    function loadNewDiv() {
+        const newDiv = document.createElement('div');
+        newDiv.className = 'test';
+        newDiv.innerHTML = '<h3>New Item</h3><p>Consectetur adipiscing elit. Donec posuere dui mauris, eu scelerisque mauris mattis in. Nunc sed leo arcu. Nulla non eleifend sapien.</p>';
+        document.getElementById('test-item').appendChild(newDiv);
+    }
+    
+    function removeDiv() {
+        document.getElementById('test-item').children[0].remove();
+    }
+
+    function editDiv() {
+        let div = document.getElementById('test-item').children[0];
+        div.innerHTML = '<h3>Edited Item</h3><p>Maecenas a mollis quam, eu venenatis lorem.</p>';
+    }
+</script>
+      
+<body style="margin: 0 auto; padding: 0; max-width: 1200px;">
+    <ilw-columns id="test-item">
+      <section class="test"><h3>Lorem ipsum dolor sit amet</h3><p>Consectetur adipiscing elit. <div>Donec posuere dui mauris, eu scelerisque mauris mattis in. Nunc sed leo arcu. Nulla non eleifend sapien.</div> </p></section>
+      <section class="test"><h3>Lorem ipsum dolor sit amet</h3><p>Nunc sed leo arcu. Nulla non eleifend sapien. </p></section>
+    </ilw-columns>
+
+    <button class="ilw-button" onclick="removeDiv()">Remove Item</button>
+    <button class="ilw-button" onclick="loadNewDiv()">Add New Item</button>
+    <button class="ilw-button" onclick="editDiv()">Edit Item</button>
+</body>
+
+</html>
