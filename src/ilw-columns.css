@@ -9,3 +9,48 @@ ilw-columns {
 ilw-columns[width="fixed"] {
     container-type: inline-size;
 }
+
+@layer ilw-columns {
+  div.ilw-columns {
+    display: flex;
+    column-gap: var(--ilw-columns-gap, 20px);
+  }
+
+  div.ilw-columns.ilw-fixed {
+    margin: 0 var(--ilw-margin--side, 0);
+  }
+
+  div.ilw-columns > div {
+    flex: 1 0 0;
+  }
+
+  div.ilw-columns.ilw-2x1 > div:first-child, div.ilw-columns.ilw-1x2 > div:last-child {
+    flex: 2 0 0;
+  }
+
+  div.ilw-columns.ilw-3x1 > div:first-child, div.ilw-columns.ilw-1x3 > div:last-child {
+    flex: 3 0 0;
+  }
+
+  div.ilw-columns.ilw-1x2x1 > div {
+    flex: 2 0 0;
+  }
+
+  div.ilw-columns.ilw-1x2x1 > div:first-child, div.ilw-columns.ilw-1x2x1 > div:last-child  {
+    flex: 1 0 0;
+  }
+
+  @media (max-width: 700px) {
+    div.ilw-columns {
+      flex-direction: column;
+      row-gap: var(--ilw-columns-gap, 20px);
+    }
+  }
+
+  @container (max-width: 700px) {
+    div.ilw-columns {
+      flex-direction: column;
+      row-gap: var(--ilw-columns-gap, 20px);
+    }
+  }
+}
