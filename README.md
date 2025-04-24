@@ -73,7 +73,7 @@ You can also create `<div>` with columns without using the ilw-columns component
 
 This is in the ilw-columns layer, so you can use the [layer syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer) to control how this cascades with other CSS layers. 
 
-The column gap is 20px, but can be changed via the `--ilw-columns-gap` CSS variable
+The column gap is 20px, but can be changed via the `--ilw-columns--gap` CSS variable
 
 ### CSS-only helper classes
 * **ilw-fixed**: Puts margins around the columns

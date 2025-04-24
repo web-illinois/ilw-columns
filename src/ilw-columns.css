@@ -13,7 +13,7 @@ ilw-columns[width="fixed"] {
 @layer ilw-columns {
   div.ilw-columns {
     display: flex;
-    column-gap: var(--ilw-columns-gap, 20px);
+    column-gap: var(--ilw-columns--gap, 20px);
   }
 
   div.ilw-columns.ilw-fixed {
@@ -43,14 +43,14 @@ ilw-columns[width="fixed"] {
   @media (max-width: 700px) {
     div.ilw-columns {
       flex-direction: column;
-      row-gap: var(--ilw-columns-gap, 20px);
+      row-gap: var(--ilw-columns--gap, 20px);
     }
   }
 
   @container (max-width: 700px) {
     div.ilw-columns {
       flex-direction: column;
-      row-gap: var(--ilw-columns-gap, 20px);
+      row-gap: var(--ilw-columns--gap, 20px);
     }
   }
 }
