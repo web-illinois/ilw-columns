@@ -39,9 +39,21 @@ export default css`
   }
 
   @media (max-width: 700px) {
+    div.columns.reverse {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 700px) {
     div.columns {
       flex-direction: column;
       row-gap: var(--ilw-columns--gap, 0);
+    }
+  }
+  
+  @media (max-width: 700px) {
+    div.columns.sidebar-left > div:first-child, div.columns.sidebar-right > div:last-child {
+      flex: 1 0 0;
     }
   }
 
