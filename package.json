@@ -13,21 +13,33 @@
     ],
     "exports": {
         ".": {
-            "import": "./src/ilw-columns.js",
-            "require": "./src/ilw-columns.cjs",
-            "default": "./src/ilw-columns.js"
+            "import": "./dist/ilw-columns.js",
+            "require": "./dist/ilw-columns.cjs",
+            "default": "./dist/ilw-columns.js"
+        },
+        "./ilw-modal.css": {
+            "import": "./dist/ilw-columns.css"
         }
     },
+    "main": "./dist/ilw-columns.js",
+    "module": "./dist/ilw-columns.js",
     "scripts": {
         "dev": "vite",
-        "build": "vite build --config vite.build.config.js --emptyOutDir",
+        "build": "tsc --noEmit && vite build --config vite.transpile.config.ts --emptyOutDir && vite build --config vite.build.config.ts --emptyOutDir",
         "preview": "vite preview",
-        "prepack": "npm run build"
+        "prepack": "npm run build",
+        "test:axe": "playwright test",
+        "test:axe:github": "playwright test --config=playwright.ci.config.ts"
     },
     "dependencies": {
         "lit": "3.1.3"
     },
     "devDependencies": {
-        "vite": "^5.2.0"
+        "@illinois-toolkit/ilw-core": "^1.0.5",
+        "@playwright/test": "^1.56.0",
+        "playwright": "^1.56.0",
+        "typescript": "^5.9.3",
+        "vite": "^7.1.10",
+        "vite-plugin-dts": "^4.5.4"
     }
 }

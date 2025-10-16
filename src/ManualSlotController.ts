@@ -1,3 +1,5 @@
+import type { LitElement, ReactiveController, ReactiveControllerHost } from 'lit';
+
 /**
  * A simple Lit reactive controller to apply manual slotting to a component.
  *
@@ -15,25 +17,13 @@
  * ${map(Array.from(this.children), () => html`<li><slot></slot></li>`)}
  * ```
  */
-export class ManualSlotController {
-    /**
-     * @type import("lit").LitElement
-     * @private
-     */
-    _host;
+export class ManualSlotController implements ReactiveController {
+    private _host: LitElement & ReactiveControllerHost;
+    private _observer: MutationObserver;
 
-    /**
-     * @type MutationObserver
-     * @private
-     */
-    _observer;
-
-    /**
-     * @param {import("lit").LitElement} host
-     */
-    constructor(host) {
+    constructor(host: LitElement & ReactiveControllerHost) {
         this._host = host;
-        this._observer = new MutationObserver((list) => {
+        this._observer = new MutationObserver(() => {
             this._host.requestUpdate();
         });
         // This binds the controller to the element's lifecycle
@@ -45,28 +35,28 @@ export class ManualSlotController {
      *
      * The render of the host component is expected to create the slots, but this
      * function will take care of assigning the elements to them.
-     * @private
      */
-    _refreshInternal() {
-        let items = Array.from(this._host.children);
-        let slots = Array.from(this._host.shadowRoot.querySelectorAll('slot'));
-        for (let slot of slots) {
+    private _refreshInternal(): void {
+        const items = Array.from(this._host.children);
+        const slots = Array.from(this._host.shadowRoot!.querySelectorAll('slot'));
+
+        for (const slot of slots) {
             if (items.length > 0) {
-                slot.assign(items.shift());
+                slot.assign(items.shift()!);
             }
         }
     }
 
-    hostUpdated() {
+    hostUpdated(): void {
         // Called by Lit after the host component's render.
         this._refreshInternal();
     }
 
-    hostConnected() {
-        this._observer.observe(this._host, {childList: true});
+    hostConnected(): void {
+        this._observer.observe(this._host, { childList: true });
     }
 
-    disconnect() {
+    hostDisconnected(): void {
         this._observer.disconnect();
     }
 }
