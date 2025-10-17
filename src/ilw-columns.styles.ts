@@ -76,24 +76,23 @@ export default css`
         container-type: inline-size;
         contain: layout;
     }
-
   .columns-outer.blue {
-        background-color: var(--il-blue);
+        background-color: var(--ilw-color--background);
     }
 
   .columns-outer.orange {
-      background-color: var(--il-orange);
+      background-color: var(--ilw-color--background);
   }
 
   .columns-outer.blue-gradient {
-      background: var(--il-gradient-blue), var(--il-blue-darker-1);
+      background: var(--ilw-color--background);
   }
   .columns-outer.orange-gradient {
-      background: var(--il-gradient-orange), var(--il-altgeld);
+      background: var(--ilw-color--background);
   }
   
   .columns-outer.gray {
-      background-color: var(--il-storm-lighter-4);
+      background-color: var(--ilw-color--background);
   }
 
   ::slotted(*) {
