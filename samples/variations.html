@@ -6,16 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Columns Component</title>
     <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
-    <link rel="stylesheet" href="https://cdn.toolkit.illinois.edu/ilw-global/3.0.0/ilw-global.css">
+    <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-global/latest/ilw-global.css">
+    <link rel="stylesheet" href="https://cdn.toolkit.illinois.edu/ilw-content/1.2/ilw-content.css">
+    <script type="module" src="https://cdn.toolkit.illinois.edu/ilw-content/1.2/ilw-content.js"></script>
     <script type="module" src="/src/ilw-columns.ts"></script>
 </head>
+<style>
+  div.test {
+    background: white;
+    border: thin solid black;
+    padding: 10px;
+  }
+</style>
 
       
 <body style="margin: 0 auto; padding: 0; max-width: 1200px;">
 <div id="variations">
     <ilw-columns id="test-item">
-      <div><h3>Column 1</h3><p>Consectetur adipiscing elit. <p>Donec posuere dui mauris, eu scelerisque mauris mattis in. Nunc sed leo arcu. Nulla non eleifend sapien.</p> </p></div>
-      <div><h3>Column 2</h3><p>Nunc sed leo arcu. Nulla non eleifend sapien. </p></div>
+        <ilw-content transparent="true"><h3>Column 1</h3><p>Consectetur adipiscing elit. <p>Donec posuere dui mauris, eu scelerisque mauris mattis in. Nunc sed leo arcu. Nulla non eleifend sapien.</p></ilw-content>
+        <ilw-content transparent="true"><h3>Column 2</h3><p>Nunc sed leo arcu. Nulla non eleifend sapien.</p></ilw-content>
     </ilw-columns>
 </div>
 
@@ -37,7 +46,7 @@
         "sidebar-right"],
         width: [undefined, "full", "auto", "page"],
         reverse: [undefined, "true"]
-      }, ["test-item", "image-test"]);
+      }, ["test-item"]);
     </script>
 
 </body>
