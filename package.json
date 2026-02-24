@@ -4,7 +4,7 @@
     "repository": "github:web-illinois/ilw-columns",
     "private": false,
     "license": "MIT",
-    "version": "1.3.3",
+    "version": "1.3.4",
     "type": "module",
     "files": [
         "src/**",
